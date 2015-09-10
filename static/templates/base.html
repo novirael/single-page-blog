@@ -1,12 +1,17 @@
-<!DOCTYPE html>
+<!DOCTYPE html>{% load static %}
 <html>
     <head>
         <meta http-equiv='Content-type' content='text/html; charset=utf-8'>
         <title>Blog</title>
     </head>
-    <body id="container">
+    <body>
+        <div id="layout"></div>
+
         <script src="https://fb.me/react-0.13.3.js"></script>
         <script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
-        <script type="text/jsx" src="../js/components/Layout.jsx"></script>
+        <script type="text/jsx" src="{% static 'js/components/Layout.jsx' %}"></script>
+        <script type="text/jsx">
+            React.render(<Layout />, document.getElementById("layout"));
+        </script>
   </body>
 </html>
