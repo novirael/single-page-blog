@@ -1,17 +1,43 @@
 <!DOCTYPE html>{% load static %}
 <html>
     <head>
-        <meta http-equiv='Content-type' content='text/html; charset=utf-8'>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
         <title>Blog</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" >
+
+        <!-- Custom CSS -->
+        <link href="{% static 'less/clean-blog.less' %}" rel="stylesheet/less" media="all">
+
+        <!-- Custom Fonts -->
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
     </head>
     <body>
-        <div id="layout"></div>
 
+        <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js"></script>
         <script src="https://fb.me/react-0.13.3.js"></script>
         <script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
-        <script type="text/jsx" src="{% static 'js/components/Layout.jsx' %}"></script>
+
+        <script src="{% static 'js/components/Layout.jsx' %}" type="text/jsx"></script>
+        <script src="{% static 'js/components/Navigation.jsx' %}" type="text/jsx"></script>
+        <script src="{% static 'js/components/Header.jsx' %}" type="text/jsx"></script>
+        <script src="{% static 'js/components/Content.jsx' %}" type="text/jsx"></script>
+        <script src="{% static 'js/components/Footer.jsx' %}" type="text/jsx"></script>
+
         <script type="text/jsx">
-            React.render(<Layout />, document.getElementById("layout"));
+            React.render(<Layout />, document.body);
         </script>
   </body>
 </html>
