@@ -6,6 +6,7 @@ var Navigation = React.createClass({
 
     items: [
         { name: 'Home', key: 'home' },
+        { name: 'Blog', key: 'blog' },
         { name: 'About', key: 'about' },
         { name: 'Contact', key: 'contact' }
     ],
@@ -22,8 +23,8 @@ var Navigation = React.createClass({
 
     render: function () {
         return (
-            <nav classNameName="navbar navbar-default navbar-custom navbar-fixed-top">
-                <div classNameName="container-fluid">
+            <nav className="navbar navbar-default navbar-custom navbar-fixed-top">
+                <div className="container-fluid">
                     <div className="navbar-header page-scroll">
                         <button type="button" className="navbar-toggle"
                                 data-toggle="collapse"
